@@ -16,8 +16,9 @@ family on THIS window, exact integer simulator):
   * Trailing stop arms at +80 bps and trails 90 bps (was +50/60): the
     recovery runs further than v2's tight trail allows.
   * Max hold 300 bars (was 120): the recovery takes ~200+ bars to play
-    out; the 120-bar backstop cut it short. Holds of 180-300 bars all
-    beat v2 on this window.
+    out; the 120-bar backstop cut it short at $9.84. Holds of 90-300 bars
+    all beat v2 ($7.15-13.52: 90 bars $9.07, 120 bars $9.84, 180 bars
+    $7.15, 240 bars $8.73, 300 bars $13.52, 600 bars $13.52).
   * Take-profit at +150 bps above the average entry (new): locks the
     peak in instead of trailing back down 90 bps from it. Worth +$3.37
     over the same config without it on this window.
@@ -35,7 +36,8 @@ integer port of the kit engine, validated against v1's +$25.16 / 5 RTs /
 drawdown 0.62%, fees $0.81, no rejected orders, two runs byte-identical
 (reply log sha256 fec23f012e2def151fea2228363ca944430ada710467b500fecbadb6b334498b).
 v2's parameters on this window make only +$5.04 (1 RT, DD 0.29%); the
-neighbourhood drop 150-170 bps / take-profit 0-150 bps makes $10.15-13.52,
+neighbourhood drop 150-170 bps / take-profit 0-150 bps makes $8.52-13.52
+(tp 0 $10.15, tp 100 $8.52, tp 150 $13.52, tp 200 $10.15),
 so the gain is broad, not a single tuned point. With fees doubled the
 same run nets +$12.71.
 
